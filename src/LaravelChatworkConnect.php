@@ -9,13 +9,14 @@ class LaravelChatworkConnect
 {
     public function __construct() {}
 
-    public static function sendMessage(string $codeSource, string $title, string $message = '')
+    public static function sendMessage(string $codeSource, string $title, string $message = ''): bool
     {
         $message = '[code]'.$codeSource.'[/code][info][title]'.$title.'[/title]'.$message.'[/info]';
-        self::request('messageServer', $message);
+
+        return self::request('messageServer', $message);
     }
 
-    private static function request(string $action, string $message = ''): ?bool
+    private static function request(string $action, string $message = ''): bool
     {
         $actionList = [
             'messageServer' => 'rooms/'.Config::get('chatwork-connect.lcc_room_id').'/messages',
