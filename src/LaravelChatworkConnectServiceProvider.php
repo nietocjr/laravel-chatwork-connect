@@ -2,9 +2,9 @@
 
 namespace nietocjr\LaravelChatworkConnect;
 
+use nietocjr\LaravelChatworkConnect\Commands\LaravelChatworkConnectCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use nietocjr\LaravelChatworkConnect\Commands\LaravelChatworkConnectCommand;
 
 class LaravelChatworkConnectServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +18,8 @@ class LaravelChatworkConnectServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-chatwork-connect')
             ->hasConfigFile();
-            // ->hasViews()
-            // ->hasMigration('create_laravel_chatwork_connect_table')
-            // ->hasCommand(LaravelChatworkConnectCommand::class);
+        // ->hasViews()
+        // ->hasMigration('create_laravel_chatwork_connect_table')
+        // ->hasCommand(LaravelChatworkConnectCommand::class);
     }
 }

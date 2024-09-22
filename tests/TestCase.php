@@ -3,8 +3,8 @@
 namespace nietocjr\LaravelChatworkConnect\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use nietocjr\LaravelChatworkConnect\LaravelChatworkConnectServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
